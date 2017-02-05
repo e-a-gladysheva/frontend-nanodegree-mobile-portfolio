@@ -1,0 +1,9 @@
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|jpg|js)$">
+        Header set Cache-Control "max-age=600, public"
+    </FilesMatch>
+
+    <FilesMatch "analytics\.js$">
+        Header set Cache-Control "max-age=7200, public"
+    </FilesMatch>
+</IfModule>
